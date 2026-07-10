@@ -5,130 +5,222 @@ import Image from "next/image";
 const industries = [
   {
     id: "besi",
-    icon: <Image src="/icons/steel.PNG" alt="Besi Baja" width={32} height={32} />,
+    iconSrc: "/icons/besi baja.PNG",
+    iconEmoji: null,
     title: "Besi Baja",
     short: "Import untuk Industri & Konstruksi",
     desc: "PT Andara Megah Logistik dapat membantu dalam proses impor besi dan baja dengan mengurus PI Besi Baja dan menyelesaikan proses impor lainnya. Dengan demikian, kami dapat membantu pelanggan dalam mengimpor besi dan baja dengan lebih mudah dan efisien.",
+    bgSrc: "/images/besibaja.jpg",
+    backColor: "#FF6700",
   },
   {
     id: "elektronik",
-    icon: "💻",
+    iconSrc: "/icons/elektronik.PNG",
+    iconEmoji: null,
     title: "Elektronik",
     short: "Smartphone, Laptop, TV & Peralatan Elektronik",
-    desc: "PT. Andara Megah Logistik melayani impor produk elektronik seperti smartphone, laptop, tablet, televisi, serta perangkat elektronik lainnya untuk kebutuhan bisnis maupun distribusi. Kami membantu seluruh proses mulai dari dokumen perizinan, bea masuk, hingga pengiriman akhir.",
+    desc: "PT. Andara Megah Logistik melayani impor produk elektronik seperti smartphone, laptop, tablet, televisi, serta perangkat elektronik lainnya untuk kebutuhan bisnis maupun distribusi.",
+    bgSrc: "/images/elektronik.jpg",
+    backColor: "#FF6700",
   },
   {
     id: "otomotif",
-    icon: "🚗",
+    iconSrc: "/icons/Otomotif.PNG",
+    iconEmoji:null,
     title: "Otomotif",
     short: "Mobil, Motor & Suku Cadang",
-    desc: "Kami melayani kebutuhan impor kendaraan bermotor seperti mobil, motor, serta suku cadang dari berbagai merek dan negara asal. Layanan ini mencakup pengurusan dokumen teknis, PPnBM, dan sertifikasi kendaraan agar dapat digunakan atau diperjualbelikan secara legal di Indonesia.",
+    desc: "Kami melayani kebutuhan impor kendaraan bermotor seperti mobil, motor, serta suku cadang dari berbagai merek dan negara asal, termasuk pengurusan PPnBM dan sertifikasi kendaraan.",
+    bgSrc: "/images/otomotif.jpg",
+    backColor: "#FF6700",
   },
   {
     id: "pakaian",
-    icon: "👗",
+    iconSrc: "/icons/Pakaian.PNG",
+    iconEmoji: null,
     title: "Pakaian & Tekstil",
     short: "Pakaian, Sepatu, Tas & Bahan Tekstil",
-    desc: "PT. Andara Megah Logistik mendukung industri fashion dan manufaktur dengan layanan impor pakaian jadi, sepatu, tas, hingga bahan tekstil. Layanan kami dirancang untuk cepat, tepat, dan sesuai dengan regulasi impor pakaian dan bahan tekstil Indonesia.",
+    desc: "PT. Andara Megah Logistik mendukung industri fashion dan manufaktur dengan layanan impor pakaian jadi, sepatu, tas, hingga bahan tekstil sesuai regulasi Indonesia.",
+    bgSrc: "/images/pakaian.jpg",
+    backColor: "#FF6700",
   },
   {
     id: "makanan",
-    icon: "🍎",
+    iconSrc: "/icons/junk-food.PNG",
+    iconEmoji: null,
     title: "Makanan & Minuman",
     short: "Produk Pangan Import",
-    desc: "Kami memiliki pengalaman dalam menangani impor berbagai produk makanan dan minuman, seperti buah segar, sayuran, produk olahan, serta minuman non-alkohol. Layanan ini mencakup pengurusan sertifikasi BPOM, SPPB, serta proses karantina dan izin lainnya.",
+    desc: "Kami memiliki pengalaman menangani impor berbagai produk makanan dan minuman, mencakup pengurusan sertifikasi BPOM, SPPB, serta proses karantina dan izin lainnya.",
+    bgSrc: "/images/makanan.jpg",
+    backColor: "#FF6700",
   },
   {
     id: "mesin",
-    icon: "⚙️",
+    iconSrc: "/icons/mesin.PNG",
+    iconEmoji: null,
     title: "Mesin & Peralatan",
     short: "Mesin Industri & Peralatan Konstruksi",
-    desc: "Kami menyediakan solusi impor untuk mesin industri, peralatan produksi, alat berat, dan peralatan teknis lainnya. Layanan ini mencakup pengurusan izin impor, spesifikasi teknis, hingga pengiriman ke lokasi proyek.",
+    desc: "Kami menyediakan solusi impor untuk mesin industri, peralatan produksi, alat berat, dan peralatan teknis lainnya, termasuk pengiriman langsung ke lokasi proyek.",
+    bgSrc: "/images/mesin.jpg",
+    backColor: "#FF6700",
   },
   {
     id: "furnitur",
-    icon: "🛋️",
+    iconSrc: "/icons/furnitur.PNG",
+    iconEmoji:null,
     title: "Furnitur & Dekorasi",
     short: "Furnitur, Dekorasi Rumah & Perlengkapan",
-    desc: "Layanan ini meliputi impor furnitur rumah tangga, dekorasi interior, hingga perlengkapan hotel & kantor dari berbagai negara. Kami memastikan penanganan ekstra hati-hati terhadap barang fragile dan bernilai seni tinggi.",
+    desc: "Layanan ini meliputi impor furnitur rumah tangga, dekorasi interior, hingga perlengkapan hotel & kantor dari berbagai negara dengan penanganan ekstra hati-hati.",
+    bgSrc: "/images/furniture.jpg",
+    backColor: "#FF6700",
   },
   {
     id: "bahan-baku",
-    icon: "🧪",
+    iconSrc: "/icons/bahan baku.PNG",
+    iconEmoji: null,
     title: "Bahan Baku",
     short: "Bahan Kimia, Logam & Plastik",
-    desc: "PT. Andara Megah Logistik melayani impor berbagai bahan baku industri, seperti bahan kimia, logam, plastik, karet, dan tekstil industri. Layanan kami dirancang untuk mendukung kelancaran rantai pasok Anda dengan pengurusan izin impor dan dokumentasi MSDS.",
+    desc: "PT. Andara Megah Logistik melayani impor berbagai bahan baku industri, seperti bahan kimia, logam, plastik, karet, dan tekstil industri dengan dokumentasi MSDS lengkap.",
+    bgSrc: "/images/bahan baku.jpg",
+    backColor: "#FF6700",
   },
 ];
 
-export default function Industries() {
-  const [active, setActive] = useState("besi");
-  const current = industries.find((i) => i.id === active)!;
+type Industry = (typeof industries)[number];
+
+function FlipCard({ item }: { item: Industry }) {
+  const [flipped, setFlipped] = useState(false);
 
   return (
-    <section className="py-20" style={{background: "var(--bg-light)"}}>
+    <div
+      className="relative h-64 cursor-pointer select-none"
+      style={{ perspective: "1000px" }}
+      onMouseEnter={() => setFlipped(true)}
+      onMouseLeave={() => setFlipped(false)}
+      onClick={() => setFlipped((f) => !f)}
+    >
+      <div
+        className="relative w-full h-full transition-transform duration-500 ease-in-out"
+        style={{
+          transformStyle: "preserve-3d",
+          transform: flipped ? "rotateY(180deg)" : "rotateY(0deg)",
+        }}
+      >
+        {/* ── FRONT ── */}
+        <div
+          className="absolute inset-0 rounded-2xl overflow-hidden flex flex-col items-center justify-center p-5 text-center"
+          style={{ backfaceVisibility: "hidden", WebkitBackfaceVisibility: "hidden" }}
+        >
+          {/* Background: image if provided, else colour gradient */}
+          {item.bgSrc ? (
+            <Image src={item.bgSrc} alt={item.title} fill className="object-cover brightness-35" />
+          ) : (
+            <div
+              className="absolute inset-0"
+              style={{
+                background: `linear-gradient(135deg, ${item.backColor}bb 0%, ${item.backColor} 100%)`,
+              }}
+            />
+          )}
+          {/* Dark overlay so text is always readable */}
+          <div className="absolute inset-0 bg-black/35" />
+
+          {/* Icon + title + short */}
+          <div className="relative z-10 flex flex-col items-center gap-3">
+            <div className="w-16 h-16 rounded-2xl flex items-center justify-center bg-white/20 backdrop-blur-sm shadow-inner">
+              {item.iconSrc ? (
+                <Image
+                  src={item.iconSrc}
+                  alt={item.title}
+                  width={36}
+                  height={36}
+                  className="object-contain"
+                />
+              ) : (
+                <span className="text-3xl leading-none">{item.iconEmoji}</span>
+              )}
+            </div>
+            <h3 className="text-white font-black text-base leading-snug">{item.title}</h3>
+            <p className="text-white/75 text-xs leading-relaxed max-w-[180px]">{item.short}</p>
+          </div>
+
+          {/* Flip hint badge */}
+          <div className="absolute bottom-3 right-3 z-10 w-7 h-7 rounded-full bg-white/20 flex items-center justify-center opacity-70">
+            <svg className="w-3.5 h-3.5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5}
+                d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+            </svg>
+          </div>
+        </div>
+
+        {/* ── BACK ── */}
+        <div
+          className="absolute inset-0 rounded-2xl overflow-hidden flex flex-col items-center justify-center p-6 text-center"
+          style={{
+            backfaceVisibility: "hidden",
+            WebkitBackfaceVisibility: "hidden",
+            transform: "rotateY(180deg)",
+            background: item.backColor,
+          }}
+        >
+          {/* Decorative circles */}
+          <div
+            className="absolute w-28 h-28 rounded-full bg-white/10"
+            style={{ top: 0, right: 0, transform: "translate(35%, -35%)" }}
+          />
+          <div
+            className="absolute w-20 h-20 rounded-full bg-white/10"
+            style={{ bottom: 0, left: 0, transform: "translate(-35%, 35%)" }}
+          />
+
+          <div className="relative z-10 flex flex-col items-center gap-3">
+            <h3 className="text-white font-black text-sm">{item.title}</h3>
+            <p className="text-white/85 text-xs leading-relaxed">{item.desc}</p>
+            {/* <a
+              href="https://api.whatsapp.com/send?phone=6281356563676"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={(e) => e.stopPropagation()}
+              className="mt-1 px-4 py-2 rounded-lg bg-white font-bold text-xs transition-all hover:opacity-90 active:scale-95"
+              style={{ color: item.backColor }}
+            >
+              Tanya Tarif →
+            </a> */}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default function Industries() {
+  return (
+    <section className="py-20" style={{ background: "var(--bg-light)" }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
         <div className="text-center mb-14">
-          <span className="text-sm font-bold tracking-widest uppercase" style={{color: "var(--accent)"}}>Industri</span>
-          <h2 className="text-4xl font-black mt-2 mb-3" style={{color: "var(--primary)"}}>
+          <span
+            className="text-sm font-bold tracking-widest uppercase"
+            style={{ color: "var(--accent)" }}
+          >
+            Industri
+          </span>
+          <h2 className="text-4xl font-black mt-2 mb-3" style={{ color: "var(--primary)" }}>
             Apapun Industri Anda
           </h2>
           <p className="text-gray-600">Kami adalah mitra pengiriman barang global Anda</p>
           <div className="section-divider mx-auto mt-4" />
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {/* Tabs */}
-          <div className="space-y-2">
-            {industries.map((ind) => (
-              <button
-                key={ind.id}
-                onClick={() => setActive(ind.id)}
-                className={`w-full flex items-center gap-3 px-4 py-3.5 rounded-xl text-left transition-all font-medium text-sm ${
-                  active === ind.id
-                    ? "text-white shadow-lg"
-                    : "bg-white text-gray-700 hover:bg-gray-50 border border-gray-100"
-                }`}
-                style={active === ind.id ? {background: "var(--primary)"} : {}}
-              >
-                <span className="text-xl">{ind.icon}</span>
-                <div>
-                  <p className="font-semibold">{ind.title}</p>
-                  <p className={`text-xs mt-0.5 ${active === ind.id ? "text-blue-200" : "text-gray-400"}`}>{ind.short}</p>
-                </div>
-              </button>
-            ))}
-          </div>
-
-          {/* Detail */}
-          <div className="lg:col-span-2">
-            <div className="bg-white rounded-3xl p-8 h-full border border-gray-100 shadow-sm">
-              <div className="flex items-start gap-5 mb-6">
-                <div className="w-16 h-16 rounded-2xl flex items-center justify-center text-3xl shrink-0"
-                  style={{background: "rgba(26,60,110,0.08)"}}>
-                  {current.icon}
-                </div>
-                <div>
-                  <h3 className="text-2xl font-black" style={{color: "var(--primary)"}}>{current.title}</h3>
-                  <p className="font-medium text-sm mt-1" style={{color: "var(--accent)"}}>{current.short}</p>
-                </div>
-              </div>
-              <p className="text-gray-600 leading-relaxed text-base mb-8">{current.desc}</p>
-              <a
-                href="https://api.whatsapp.com/send?phone=6281356563676"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-bold text-sm text-white transition-all hover:opacity-90"
-                style={{background: "var(--primary)"}}
-              >
-                Tanya Tarif {current.title}
-                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7"/>
-                </svg>
-              </a>
-            </div>
-          </div>
+        {/* Flip-card grid: 1 col → 2 col → 4 col */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          {industries.map((item) => (
+            <FlipCard key={item.id} item={item} />
+          ))}
         </div>
+
+        <p className="text-center text-gray-400 text-xs mt-6 select-none">
+          💡 Hover kartu untuk melihat detail · Tap pada mobile
+        </p>
       </div>
     </section>
   );

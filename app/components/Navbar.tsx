@@ -40,7 +40,7 @@ export default function Navbar() {
           src="/images/Logo1.png"
           alt="Logo"
           width={120}
-          height={150}
+          height={120}
           className="object-contain transition-transform duration-300 hover:scale-110"
           priority
           />
