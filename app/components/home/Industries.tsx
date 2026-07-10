@@ -140,7 +140,7 @@ function FlipCard({ item }: { item: Industry }) {
               )}
             </div>
             <h3 className="text-white font-black text-base leading-snug">{item.title}</h3>
-            <p className="text-white/75 text-xs leading-relaxed max-w-[180px]">{item.short}</p>
+            <p className="text-white/75 text-xs leading-relaxed max-w-45">{item.short}</p>
           </div>
 
           {/* Flip hint badge */}
