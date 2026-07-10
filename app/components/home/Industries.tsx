@@ -26,7 +26,7 @@ const industries = [
   {
     id: "otomotif",
     iconSrc: "/icons/otomotif.png",
-    iconEmoji:null,
+    iconEmoji: null,
     title: "Otomotif",
     short: "Mobil, Motor & Suku Cadang",
     desc: "Kami melayani kebutuhan impor kendaraan bermotor seperti mobil, motor, serta suku cadang dari berbagai merek dan negara asal, termasuk pengurusan PPnBM dan sertifikasi kendaraan.",
@@ -66,7 +66,7 @@ const industries = [
   {
     id: "furnitur",
     iconSrc: "/icons/furnitur.png",
-    iconEmoji:null,
+    iconEmoji: null,
     title: "Furnitur & Dekorasi",
     short: "Furnitur, Dekorasi Rumah & Perlengkapan",
     desc: "Layanan ini meliputi impor furnitur rumah tangga, dekorasi interior, hingga perlengkapan hotel & kantor dari berbagai negara dengan penanganan ekstra hati-hati.",
@@ -108,11 +108,20 @@ function FlipCard({ item }: { item: Industry }) {
         {/* ── FRONT ── */}
         <div
           className="absolute inset-0 rounded-2xl overflow-hidden flex flex-col items-center justify-center p-5 text-center"
-          style={{ backfaceVisibility: "hidden", WebkitBackfaceVisibility: "hidden" }}
+          style={{
+            backfaceVisibility: "hidden",
+            WebkitBackfaceVisibility: "hidden",
+          }}
         >
           {/* Background: image if provided, else colour gradient */}
           {item.bgSrc ? (
-            <Image src={item.bgSrc} alt={item.title} fill className="object-cover brightness-35" />
+            <Image
+              src={item.bgSrc}
+              alt={item.title}
+              fill
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+              className="object-cover brightness-35"
+            />
           ) : (
             <div
               className="absolute inset-0"
@@ -139,15 +148,28 @@ function FlipCard({ item }: { item: Industry }) {
                 <span className="text-3xl leading-none">{item.iconEmoji}</span>
               )}
             </div>
-            <h3 className="text-white font-black text-base leading-snug">{item.title}</h3>
-            <p className="text-white/75 text-xs leading-relaxed max-w-45">{item.short}</p>
+            <h3 className="text-white font-black text-base leading-snug">
+              {item.title}
+            </h3>
+            <p className="text-white/75 text-xs leading-relaxed max-w-45">
+              {item.short}
+            </p>
           </div>
 
           {/* Flip hint badge */}
           <div className="absolute bottom-3 right-3 z-10 w-7 h-7 rounded-full bg-white/20 flex items-center justify-center opacity-70">
-            <svg className="w-3.5 h-3.5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5}
-                d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+            <svg
+              className="w-3.5 h-3.5 text-white"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2.5}
+                d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
+              />
             </svg>
           </div>
         </div>
@@ -204,10 +226,15 @@ export default function Industries() {
           >
             Industri
           </span>
-          <h2 className="text-4xl font-black mt-2 mb-3" style={{ color: "var(--primary)" }}>
+          <h2
+            className="text-4xl font-black mt-2 mb-3"
+            style={{ color: "var(--primary)" }}
+          >
             Apapun Industri Anda
           </h2>
-          <p className="text-gray-600">Kami adalah mitra pengiriman barang global Anda</p>
+          <p className="text-gray-600">
+            Kami adalah mitra pengiriman barang global Anda
+          </p>
           <div className="section-divider mx-auto mt-4" />
         </div>
 
