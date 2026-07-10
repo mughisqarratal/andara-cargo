@@ -5,7 +5,7 @@ import Image from "next/image";
 const industries = [
   {
     id: "besi",
-    iconSrc: "/icons/besi baja.PNG",
+    iconSrc: "/icons/besibaja.png",
     iconEmoji: null,
     title: "Besi Baja",
     short: "Import untuk Industri & Konstruksi",
@@ -15,7 +15,7 @@ const industries = [
   },
   {
     id: "elektronik",
-    iconSrc: "/icons/elektronik.PNG",
+    iconSrc: "/icons/elektronik.png",
     iconEmoji: null,
     title: "Elektronik",
     short: "Smartphone, Laptop, TV & Peralatan Elektronik",
@@ -25,7 +25,7 @@ const industries = [
   },
   {
     id: "otomotif",
-    iconSrc: "/icons/Otomotif.PNG",
+    iconSrc: "/icons/otomotif.png",
     iconEmoji:null,
     title: "Otomotif",
     short: "Mobil, Motor & Suku Cadang",
@@ -35,7 +35,7 @@ const industries = [
   },
   {
     id: "pakaian",
-    iconSrc: "/icons/Pakaian.PNG",
+    iconSrc: "/icons/pakaian.png",
     iconEmoji: null,
     title: "Pakaian & Tekstil",
     short: "Pakaian, Sepatu, Tas & Bahan Tekstil",
@@ -45,7 +45,7 @@ const industries = [
   },
   {
     id: "makanan",
-    iconSrc: "/icons/junk-food.PNG",
+    iconSrc: "/icons/junkfood.png",
     iconEmoji: null,
     title: "Makanan & Minuman",
     short: "Produk Pangan Import",
@@ -55,7 +55,7 @@ const industries = [
   },
   {
     id: "mesin",
-    iconSrc: "/icons/mesin.PNG",
+    iconSrc: "/icons/mesin.png",
     iconEmoji: null,
     title: "Mesin & Peralatan",
     short: "Mesin Industri & Peralatan Konstruksi",
@@ -65,7 +65,7 @@ const industries = [
   },
   {
     id: "furnitur",
-    iconSrc: "/icons/furnitur.PNG",
+    iconSrc: "/icons/furnitur.png",
     iconEmoji:null,
     title: "Furnitur & Dekorasi",
     short: "Furnitur, Dekorasi Rumah & Perlengkapan",
@@ -75,7 +75,7 @@ const industries = [
   },
   {
     id: "bahan-baku",
-    iconSrc: "/icons/bahan baku.PNG",
+    iconSrc: "/icons/bahanbaku.png",
     iconEmoji: null,
     title: "Bahan Baku",
     short: "Bahan Kimia, Logam & Plastik",
