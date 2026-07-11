@@ -197,16 +197,6 @@ function FlipCard({ item }: { item: Industry }) {
           <div className="relative z-10 flex flex-col items-center gap-3">
             <h3 className="text-white font-black text-sm">{item.title}</h3>
             <p className="text-white/85 text-xs leading-relaxed">{item.desc}</p>
-            {/* <a
-              href="https://api.whatsapp.com/send?phone=6281356563676"
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={(e) => e.stopPropagation()}
-              className="mt-1 px-4 py-2 rounded-lg bg-white font-bold text-xs transition-all hover:opacity-90 active:scale-95"
-              style={{ color: item.backColor }}
-            >
-              Tanya Tarif →
-            </a> */}
           </div>
         </div>
       </div>
@@ -244,10 +234,6 @@ export default function Industries() {
             <FlipCard key={item.id} item={item} />
           ))}
         </div>
-
-        <p className="text-center text-gray-400 text-xs mt-6 select-none">
-          💡 Hover kartu untuk melihat detail · Tap pada mobile
-        </p>
       </div>
     </section>
   );
