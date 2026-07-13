@@ -113,7 +113,7 @@ function FlipCard({ item }: { item: Industry }) {
               alt={item.title}
               fill
               sizes="(max-width:640px)100vw,(max-width:1024px)50vw,25vw"
-              className="flip-bg-image object-cover min-h-full brightness-35"
+              className="flip-bg-image object-cover relative h-64 brightness-35"
             />
           ) : (
             <div
