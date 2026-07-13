@@ -148,7 +148,7 @@ export default function Testimonials() {
       onMouseEnter={() => { isPaused.current = false; }}
       onMouseLeave={() => { isPaused.current = false; }}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-14">
           <span
