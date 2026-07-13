@@ -81,7 +81,7 @@ const industries = [
     title: "Bahan Baku",
     short: "Bahan Kimia, Logam & Plastik",
     desc: "PT. Andara Megah Logistik melayani impor berbagai bahan baku industri, seperti bahan kimia, logam, plastik, karet, dan tekstil industri dengan dokumentasi MSDS lengkap.",
-    bgSrc: "/images/bahan baku.jpg",
+    bgSrc: "/images/bahanbaku.jpg",
     backColor: "#FF6700",
   },
 ];
@@ -108,14 +108,16 @@ function FlipCard({ item }: { item: Industry }) {
         <div className="flip-face flip-front flex flex-col items-center justify-center p-5 text-center">
 
           {item.bgSrc ? (
-            <Image
-              src={item.bgSrc}
-              alt={item.title}
-              fill
-              sizes="(max-width:640px)100vw,(max-width:1024px)50vw,25vw"
-              className="flip-bg-image object-cover relative h-64 brightness-35"
-            />
-          ) : (
+  <div
+    className="absolute inset-0"
+    style={{
+      backgroundImage: `url(${item.bgSrc})`,
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      filter: "brightness(35%)",
+    }}
+  />
+) : (
             <div
               className="absolute inset-0"
               style={{
