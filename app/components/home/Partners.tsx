@@ -166,7 +166,7 @@ export default function Partners() {
             {cloned.map((partner, i) => (
               <div
                 key={`${partner.name}-${i}`}
-                className="flex-shrink-0 flex justify-center items-center px-2"
+                className="shrink-0 flex justify-center items-center px-2"
                 style={{
                   width: `${100 / SHOW}%`,
                   height: "80px",

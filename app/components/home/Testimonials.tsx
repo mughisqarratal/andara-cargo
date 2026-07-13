@@ -181,7 +181,7 @@ export default function Testimonials() {
               {cloned.map((t, i) => (
                 <div
                   key={`${t.name}-${i}`}
-                  className="flex-shrink-0 px-3"
+                  className="shrink-0 px-3"
                   style={{ width: `${100 / visibleCount}%` }}
                 >
                   <div className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm h-full flex flex-col">
@@ -200,7 +200,7 @@ export default function Testimonials() {
                     {/* Author */}
                     <div className="flex items-center gap-3 pt-4 border-t border-gray-100">
                       <div
-                        className="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0"
+                        className="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold text-sm shrink-0"
                         style={{ background: t.color }}
                       >
                         {t.avatar}

@@ -98,26 +98,21 @@ function FlipCard({ item }: { item: Industry }) {
       onMouseLeave={() => setFlipped(false)}
       onClick={() => setFlipped((v) => !v)}
     >
-      <div
-        className={`flip-card-inner ${
-          flipped ? "flipped" : ""
-        }`}
-      >
+      <div className={`flip-card-inner ${flipped ? "flipped" : ""}`}>
         {/* FRONT */}
 
         <div className="flip-face flip-front flex flex-col items-center justify-center p-5 text-center">
-
           {item.bgSrc ? (
-  <div
-    className="absolute inset-0"
-    style={{
-      backgroundImage: `url(${item.bgSrc})`,
-      backgroundSize: "cover",
-      backgroundPosition: "center",
-      filter: "brightness(35%)",
-    }}
-  />
-) : (
+            <div
+              className="absolute inset-0"
+              style={{
+                backgroundImage: `url(${item.bgSrc})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                filter: "brightness(35%)",
+              }}
+            />
+          ) : (
             <div
               className="absolute inset-0"
               style={{
@@ -129,36 +124,27 @@ function FlipCard({ item }: { item: Industry }) {
           <div className="absolute inset-0 bg-black/35" />
 
           <div className="relative z-10 flex flex-col items-center gap-3">
-
             <div className="w-16 h-16 rounded-2xl flex items-center justify-center bg-white/20 backdrop-blur-sm shadow-inner">
-
               {item.iconSrc ? (
                 <Image
                   src={item.iconSrc}
                   alt={item.title}
-                  width={36}
-                  height={36}
+                  width={40}
+                  height={40}
                 />
               ) : (
-                <span className="text-3xl">
-                  {item.iconEmoji}
-                </span>
+                <span className="text-3xl">{item.iconEmoji}</span>
               )}
-
             </div>
 
-            <h3 className="text-white font-black text-base">
-              {item.title}
-            </h3>
+            <h3 className="text-white font-black text-base">{item.title}</h3>
 
             <p className="text-white/75 text-xs leading-relaxed max-w-45">
               {item.short}
             </p>
-
           </div>
 
           <div className="absolute bottom-3 right-3 z-10 w-7 h-7 rounded-full bg-white/20 flex items-center justify-center">
-
             <svg
               className="w-3.5 h-3.5 text-white"
               fill="none"
@@ -172,9 +158,7 @@ function FlipCard({ item }: { item: Industry }) {
                 d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
               />
             </svg>
-
           </div>
-
         </div>
 
         {/* BACK */}
@@ -185,7 +169,6 @@ function FlipCard({ item }: { item: Industry }) {
             background: item.backColor,
           }}
         >
-
           <div
             className="absolute w-28 h-28 rounded-full bg-white/10"
             style={{
@@ -205,19 +188,11 @@ function FlipCard({ item }: { item: Industry }) {
           />
 
           <div className="relative z-10">
+            <h3 className="text-white font-black text-sm mb-3">{item.title}</h3>
 
-            <h3 className="text-white font-black text-sm mb-3">
-              {item.title}
-            </h3>
-
-            <p className="text-white/85 text-xs leading-relaxed">
-              {item.desc}
-            </p>
-
+            <p className="text-white/85 text-xs leading-relaxed">{item.desc}</p>
           </div>
-
         </div>
-
       </div>
     </div>
   );
