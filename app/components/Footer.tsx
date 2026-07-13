@@ -112,9 +112,8 @@ export default function Footer() {
 
       {/* Bottom bar */}
       <div className="border-t border-white/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex flex-col md:flex-row justify-between items-center gap-3">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex flex-col md:flex-row justify-center items-center">
           <p className="text-gray-500 text-sm">© 2026 - PT. Andara Megah Logistik. All rights reserved.</p>
-          <p className="text-gray-500 text-sm">Service Import Internasional</p>
         </div>
       </div>
     </footer>

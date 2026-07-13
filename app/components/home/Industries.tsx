@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Image from "next/image";
+import "../industries.css";
 
 const industries = [
   {
@@ -92,35 +93,27 @@ function FlipCard({ item }: { item: Industry }) {
 
   return (
     <div
-      className="relative h-64 cursor-pointer select-none"
-      style={{ perspective: "1000px" }}
+      className="flip-card relative h-64 cursor-pointer select-none"
       onMouseEnter={() => setFlipped(true)}
       onMouseLeave={() => setFlipped(false)}
-      onClick={() => setFlipped((f) => !f)}
+      onClick={() => setFlipped((v) => !v)}
     >
       <div
-        className="relative w-full h-full transition-transform duration-500 ease-in-out"
-        style={{
-          transformStyle: "preserve-3d",
-          transform: flipped ? "rotateY(180deg)" : "rotateY(0deg)",
-        }}
+        className={`flip-card-inner ${
+          flipped ? "flipped" : ""
+        }`}
       >
-        {/* ── FRONT ── */}
-        <div
-          className="absolute inset-0 rounded-2xl overflow-hidden flex flex-col items-center justify-center p-5 text-center"
-          style={{
-            backfaceVisibility: "hidden",
-            WebkitBackfaceVisibility: "hidden",
-          }}
-        >
-          {/* Background: image if provided, else colour gradient */}
+        {/* FRONT */}
+
+        <div className="flip-face flip-front flex flex-col items-center justify-center p-5 text-center">
+
           {item.bgSrc ? (
             <Image
               src={item.bgSrc}
               alt={item.title}
               fill
-              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-              className="object-cover brightness-35"
+              sizes="(max-width:640px)100vw,(max-width:1024px)50vw,25vw"
+              className="flip-bg-image object-cover brightness-35"
             />
           ) : (
             <div
@@ -130,34 +123,40 @@ function FlipCard({ item }: { item: Industry }) {
               }}
             />
           )}
-          {/* Dark overlay so text is always readable */}
+
           <div className="absolute inset-0 bg-black/35" />
 
-          {/* Icon + title + short */}
           <div className="relative z-10 flex flex-col items-center gap-3">
+
             <div className="w-16 h-16 rounded-2xl flex items-center justify-center bg-white/20 backdrop-blur-sm shadow-inner">
+
               {item.iconSrc ? (
                 <Image
                   src={item.iconSrc}
                   alt={item.title}
                   width={36}
                   height={36}
-                  className="object-contain"
                 />
               ) : (
-                <span className="text-3xl leading-none">{item.iconEmoji}</span>
+                <span className="text-3xl">
+                  {item.iconEmoji}
+                </span>
               )}
+
             </div>
-            <h3 className="text-white font-black text-base leading-snug">
+
+            <h3 className="text-white font-black text-base">
               {item.title}
             </h3>
+
             <p className="text-white/75 text-xs leading-relaxed max-w-45">
               {item.short}
             </p>
+
           </div>
 
-          {/* Flip hint badge */}
-          <div className="absolute bottom-3 right-3 z-10 w-7 h-7 rounded-full bg-white/20 flex items-center justify-center opacity-70">
+          <div className="absolute bottom-3 right-3 z-10 w-7 h-7 rounded-full bg-white/20 flex items-center justify-center">
+
             <svg
               className="w-3.5 h-3.5 text-white"
               fill="none"
@@ -171,34 +170,52 @@ function FlipCard({ item }: { item: Industry }) {
                 d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
               />
             </svg>
+
           </div>
+
         </div>
 
-        {/* ── BACK ── */}
+        {/* BACK */}
+
         <div
-          className="absolute inset-0 rounded-2xl overflow-hidden flex flex-col items-center justify-center p-6 text-center"
+          className="flip-face flip-back flex flex-col justify-center items-center text-center p-6"
           style={{
-            backfaceVisibility: "hidden",
-            WebkitBackfaceVisibility: "hidden",
-            transform: "rotateY(180deg)",
             background: item.backColor,
           }}
         >
-          {/* Decorative circles */}
+
           <div
             className="absolute w-28 h-28 rounded-full bg-white/10"
-            style={{ top: 0, right: 0, transform: "translate(35%, -35%)" }}
-          />
-          <div
-            className="absolute w-20 h-20 rounded-full bg-white/10"
-            style={{ bottom: 0, left: 0, transform: "translate(-35%, 35%)" }}
+            style={{
+              top: 0,
+              right: 0,
+              transform: "translate(35%,-35%)",
+            }}
           />
 
-          <div className="relative z-10 flex flex-col items-center gap-3">
-            <h3 className="text-white font-black text-sm">{item.title}</h3>
-            <p className="text-white/85 text-xs leading-relaxed">{item.desc}</p>
+          <div
+            className="absolute w-20 h-20 rounded-full bg-white/10"
+            style={{
+              bottom: 0,
+              left: 0,
+              transform: "translate(-35%,35%)",
+            }}
+          />
+
+          <div className="relative z-10">
+
+            <h3 className="text-white font-black text-sm mb-3">
+              {item.title}
+            </h3>
+
+            <p className="text-white/85 text-xs leading-relaxed">
+              {item.desc}
+            </p>
+
           </div>
+
         </div>
+
       </div>
     </div>
   );
