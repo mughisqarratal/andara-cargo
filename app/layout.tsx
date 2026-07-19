@@ -7,6 +7,11 @@ import WhatsAppFloat from "./components/WhatsAppFloat";
 export const metadata: Metadata = {
   title: "Andara Cargo - Layanan Import Export Barang Termurah",
   description: "Dapatkan layanan Jasa Import Export Barang yang cepat dan aman untuk kebutuhan bisnis global Anda dengan tim profesional kami.",
+  icons: {
+    icon: "/andara2.ico",
+    shortcut: "/andara2.ico",
+    apple: "/andara2.ico",
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
