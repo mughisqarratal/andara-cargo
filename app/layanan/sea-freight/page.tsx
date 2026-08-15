@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image"
 
 export const metadata: Metadata = {
   title: "Sea Freight - Andara Cargo",
@@ -12,7 +13,9 @@ export default function Page() {
       <section className="pt-32 pb-20" style={{background: "var(--primary-dark)"}}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <span className="text-sm font-bold tracking-widest uppercase" style={{color: "var(--accent)"}}>Layanan Kami</span>
-          <div className="text-6xl mt-4 mb-4">🚢</div>
+          <div className="flex justify-center my-4">
+                    <Image src="/icons/sea.png" alt="Door to Door Import" width={100} height={100} />
+                    </div>
           <h1 className="text-4xl md:text-5xl font-black text-white mb-5">Sea Freight</h1>
           <p className="text-blue-200 text-lg max-w-2xl mx-auto">Pengiriman via laut dengan kapasitas besar dan biaya yang lebih efisien untuk volume tinggi.</p>
         </div>
