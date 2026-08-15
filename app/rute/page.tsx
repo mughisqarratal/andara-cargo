@@ -22,7 +22,7 @@ const routes = [
   },
   {
     country: "Inggris",
-    imageSrc: "/images/routes/inggris.png ",
+    imageSrc: "/images/routes/inggris.png",
   },
   {
     country: "Polandia",
