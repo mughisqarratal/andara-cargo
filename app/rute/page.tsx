@@ -10,63 +10,63 @@ export const metadata: Metadata = {
 const routes = [
   {
     country: "Amerika Serikat",
-    imageSrc: "/images/routes/amerika.PNG",
+    imageSrc: "/images/routes/amerika.png",
   },
   {
     country: "Belanda",
-    imageSrc: "/images/routes/belanda.PNG",
+    imageSrc: "/images/routes/belanda.png",
   },
   {
     country: "Jerman",
-    imageSrc: "/images/routes/jerman.PNG",
+    imageSrc: "/images/routes/jerman.png",
   },
   {
     country: "Inggris",
-    imageSrc: "/images/routes/inggris.PNG",
+    imageSrc: "/images/routes/inggris.png ",
   },
   {
     country: "Polandia",
-    imageSrc: "/images/routes/polandia.PNG",
+    imageSrc: "/images/routes/polandia.png",
   },
   {
     country: "Australia",
-    imageSrc: "/images/routes/australia.PNG",
+    imageSrc: "/images/routes/australia.png",
   },
   {
     country: "China",
-    imageSrc: "/images/routes/china.PNG",
+    imageSrc: "/images/routes/china.png",
   },
   {
     country: "Jepang",
-    imageSrc: "/images/routes/jepang.PNG",
+    imageSrc: "/images/routes/jepang.png",
   },
   {
     country: "Hong Kong",
-    imageSrc: "/images/routes/hongkong.PNG",
+    imageSrc: "/images/routes/hongkong.png",
   },
   {
     country: "Korea Selatan",
-    imageSrc: "/images/routes/korea.PNG",
+    imageSrc: "/images/routes/korea.png",
   },
   {
     country: "India",
-    imageSrc: "/images/routes/india.PNG",
+    imageSrc: "/images/routes/india.png",
   },
   {
     country: "Singapura",
-    imageSrc: "/images/routes/singapura.PNG",
+    imageSrc: "/images/routes/singapura.png",
   },
   {
     country: "Malaysia",
-    imageSrc: "/images/routes/malaysia.PNG",
+    imageSrc: "/images/routes/malaysia.png",
   },
   {
     country: "Thailand",
-    imageSrc: "/images/routes/thailand.PNG",
+    imageSrc: "/images/routes/thailand.png",
   },
   {
     country: "Negara Lainnya",
-    imageSrc: "/images/routes/negara lain.PNG",
+    imageSrc: "/images/routes/negara lain.png",
   },
 ];
 
