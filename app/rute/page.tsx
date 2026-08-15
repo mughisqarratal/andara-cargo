@@ -14,23 +14,23 @@ const routes = [
   },
   {
     country: "Belanda",
-    imageSrc: "/images/routes/Belanda.PNG",
+    imageSrc: "/images/routes/belanda.PNG",
   },
   {
     country: "Jerman",
-    imageSrc: "/images/routes/germany.PNG",
+    imageSrc: "/images/routes/jerman.PNG",
   },
   {
     country: "Inggris",
-    imageSrc: "/images/routes/uk.PNG",
+    imageSrc: "/images/routes/inggris.PNG",
   },
   {
     country: "Polandia",
-    imageSrc: "/images/routes/Polandia.PNG",
+    imageSrc: "/images/routes/polandia.PNG",
   },
   {
     country: "Australia",
-    imageSrc: "/images/routes/Australia.PNG",
+    imageSrc: "/images/routes/australia.PNG",
   },
   {
     country: "China",
@@ -62,7 +62,7 @@ const routes = [
   },
   {
     country: "Thailand",
-    imageSrc: "/images/routes/bangkok.PNG",
+    imageSrc: "/images/routes/thailand.PNG",
   },
   {
     country: "Negara Lainnya",
