@@ -107,8 +107,8 @@ export default function RutePage() {
           </h1>
 
           <p className="text-blue-200 text-lg max-w-2xl mx-auto">
-            Kami melayani pengiriman ke berbagai negara di seluruh dunia
-            dengan waktu transit yang kompetitif
+            Kami melayani pengiriman ke berbagai negara di seluruh dunia dengan
+            waktu transit yang kompetitif
           </p>
         </div>
       </section>
@@ -119,7 +119,6 @@ export default function RutePage() {
 
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
           {/* =================================================
               STATS
           ================================================= */}
@@ -179,9 +178,7 @@ export default function RutePage() {
 
                 {/* LABEL */}
 
-                <p className="text-gray-500 text-sm">
-                  {s.label}
-                </p>
+                <p className="text-gray-500 text-sm">{s.label}</p>
               </div>
             ))}
           </div>
@@ -221,13 +218,11 @@ export default function RutePage() {
               background: "var(--primary)",
             }}
           >
-            <h3 className="text-2xl font-black mb-3">
-              Tujuan Lain?
-            </h3>
+            <h3 className="text-2xl font-black mb-3">Tujuan Lain?</h3>
 
             <p className="text-blue-200 mb-6">
-              Tidak menemukan negara tujuan Anda? Hubungi kami untuk
-              informasi rute selengkapnya.
+              Tidak menemukan negara tujuan Anda? Hubungi kami untuk informasi
+              rute selengkapnya.
             </p>
 
             <a
@@ -251,7 +246,6 @@ export default function RutePage() {
               Tanya Rute Lainnya
             </a>
           </div>
-
         </div>
       </section>
     </>

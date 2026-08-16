@@ -47,7 +47,7 @@ const services = [
 export default function Services() {
   return (
     <section
-      className="py-20"
+      className="py-12"
       style={{ background: "var(--bg-light)" }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

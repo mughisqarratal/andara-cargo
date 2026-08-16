@@ -144,7 +144,7 @@ export default function Testimonials() {
 
   return (
     <section
-      className="py-20 bg-white overflow-hidden"
+      className="py-12 bg-white overflow-hidden"
       onMouseEnter={() => { isPaused.current = false; }}
       onMouseLeave={() => { isPaused.current = false; }}
     >

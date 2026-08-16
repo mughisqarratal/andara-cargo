@@ -8,17 +8,14 @@ type CountryCardProps = {
   imageSrc: string;
 };
 
-export default function CountryCard({
-  country,
-  imageSrc,
-}: CountryCardProps) {
+export default function CountryCard({ country, imageSrc }: CountryCardProps) {
   const [active, setActive] = useState(false);
 
   return (
     <div className="group">
       {/* IMAGE CONTAINER */}
       <div
-        className="relative aspect-[4/4.5] overflow-hidden rounded-xl cursor-pointer"
+        className="relative aspect-4/4.5 overflow-hidden rounded cursor-pointer"
         onClick={() => setActive((prev) => !prev)}
         onMouseEnter={() => setActive(true)}
         onMouseLeave={() => setActive(false)}
@@ -51,11 +48,7 @@ export default function CountryCard({
             pointer-events-none
             transition-opacity
             duration-500
-            ${
-              active
-                ? "opacity-0"
-                : "opacity-100"
-            }
+            ${active ? "opacity-0" : "opacity-100"}
           `}
         />
       </div>

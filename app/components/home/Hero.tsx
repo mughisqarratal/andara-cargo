@@ -23,7 +23,7 @@ export default function Hero() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-tight mb-6">
               Smart Solution for{" "}
               <span className="relative">
-                <span style={{color: "var(--accent)"}}>International</span>
+                <span style={{color: "#FF6700"}}>International</span>
               </span>{" "}
               Shipping
             </h1>
