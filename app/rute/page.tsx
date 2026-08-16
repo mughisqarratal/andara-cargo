@@ -1,11 +1,16 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import CountryCard from "../components/CountryCard";
 
 export const metadata: Metadata = {
   title: "Rute Pengiriman - Andara Cargo",
   description:
     "Rute import export yang tersedia di Andara Cargo dari berbagai negara.",
 };
+
+/* =========================================================
+   COUNTRY ROUTES
+========================================================= */
 
 const routes = [
   {
@@ -70,18 +75,29 @@ const routes = [
   },
 ];
 
+/* =========================================================
+   PAGE
+========================================================= */
+
 export default function RutePage() {
   return (
     <>
-      {/* HERO */}
+      {/* =====================================================
+          HERO
+      ===================================================== */}
+
       <section
         className="pt-32 pb-20"
-        style={{ background: "var(--primary-dark)" }}
+        style={{
+          background: "var(--primary-dark)",
+        }}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <span
             className="text-sm font-bold tracking-widest uppercase"
-            style={{ color: "var(--accent)" }}
+            style={{
+              color: "var(--accent)",
+            }}
           >
             Jangkauan Global
           </span>
@@ -91,16 +107,23 @@ export default function RutePage() {
           </h1>
 
           <p className="text-blue-200 text-lg max-w-2xl mx-auto">
-            Kami melayani pengiriman ke berbagai negara di seluruh dunia dengan
-            waktu transit yang kompetitif
+            Kami melayani pengiriman ke berbagai negara di seluruh dunia
+            dengan waktu transit yang kompetitif
           </p>
         </div>
       </section>
 
-      {/* CONTENT */}
+      {/* =====================================================
+          CONTENT
+      ===================================================== */}
+
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* STATS */}
+
+          {/* =================================================
+              STATS
+          ================================================= */}
+
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
             {[
               {
@@ -127,9 +150,12 @@ export default function RutePage() {
               <div
                 key={s.label}
                 className="text-center p-6 rounded-2xl"
-                style={{ background: "var(--bg-light)" }}
+                style={{
+                  background: "var(--bg-light)",
+                }}
               >
                 {/* ICON */}
+
                 <div className="flex justify-center mb-3">
                   <Image
                     src={s.imageSrc}
@@ -141,89 +167,67 @@ export default function RutePage() {
                 </div>
 
                 {/* VALUE */}
+
                 <p
                   className="text-3xl font-black"
-                  style={{ color: "var(--primary)" }}
+                  style={{
+                    color: "var(--primary)",
+                  }}
                 >
                   {s.value}
                 </p>
 
                 {/* LABEL */}
-                <p className="text-gray-500 text-sm">{s.label}</p>
+
+                <p className="text-gray-500 text-sm">
+                  {s.label}
+                </p>
               </div>
             ))}
           </div>
 
-          {/* COUNTRY ROUTES */}
+          {/* =================================================
+              COUNTRY ROUTES
+          ================================================= */}
+
           <h2
             className="text-2xl font-black mb-8"
-            style={{ color: "var(--primary)" }}
+            style={{
+              color: "var(--primary)",
+            }}
           >
             Negara yang Kami Layani
           </h2>
 
           {/* COUNTRY IMAGE GRID */}
+
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {routes.map((route) => (
-              <div key={route.country} className="group">
-                {/* IMAGE */}
-                <div className="relative aspect-4/4.5 overflow-hidden rounded">
-                  <Image
-                    src={route.imageSrc}
-                    alt={route.country}
-                    fill
-                    sizes="(max-width: 1024px) 50vw, 25vw"
-                    className="
-                      object-fill
-                      brightness-[0.65]
-                      transition-all
-                      duration-500
-                      group-hover:brightness-100
-                      group-hover:scale-105
-                    "
-                  />
-
-                  {/* Overlay */}
-                  <div
-                    className="
-                      absolute
-                      inset-0
-                      bg-black/10
-                      pointer-events-none
-                      transition-opacity
-                      duration-500
-                      group-hover:opacity-0
-                    "
-                  />
-                </div>
-
-                {/* COUNTRY NAME */}
-                <h3
-                  className="
-                    text-center
-                    font-bold
-                    text-base
-                    sm:text-lg
-                    mt-3
-                  "
-                  style={{ color: "var(--primary)" }}
-                >
-                  {route.country}
-                </h3>
-              </div>
+              <CountryCard
+                key={route.country}
+                country={route.country}
+                imageSrc={route.imageSrc}
+              />
             ))}
           </div>
 
-          {/* CTA */}
+          {/* =================================================
+              CTA
+          ================================================= */}
+
           <div
             className="mt-14 rounded-3xl p-10 text-center text-white"
-            style={{ background: "var(--primary)" }}
+            style={{
+              background: "var(--primary)",
+            }}
           >
-            <h3 className="text-2xl font-black mb-3">Tujuan Lain?</h3>
+            <h3 className="text-2xl font-black mb-3">
+              Tujuan Lain?
+            </h3>
 
             <p className="text-blue-200 mb-6">
-              Tidak menemukan negara tujuan Anda? Hubungi kami untuk informasi
-              rute selengkapnya.
+              Tidak menemukan negara tujuan Anda? Hubungi kami untuk
+              informasi rute selengkapnya.
             </p>
 
             <a
@@ -240,11 +244,14 @@ export default function RutePage() {
                 transition-all
                 hover:opacity-90
               "
-              style={{ background: "var(--accent)" }}
+              style={{
+                background: "var(--accent)",
+              }}
             >
               Tanya Rute Lainnya
             </a>
           </div>
+
         </div>
       </section>
     </>
