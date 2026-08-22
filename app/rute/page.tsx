@@ -89,7 +89,7 @@ export default function RutePage() {
       <section
         className="pt-32 pb-20"
         style={{
-          background: "var(--primary-dark)",
+          background: "var(--primary-orange)",
         }}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
