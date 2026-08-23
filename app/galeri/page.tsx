@@ -577,7 +577,7 @@ export default function GaleriPage() {
           className="
             fixed
             inset-0
-            z-[999]
+            z-999
             bg-black/85
             backdrop-blur-sm
             flex
