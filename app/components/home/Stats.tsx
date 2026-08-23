@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 
 function CountUp({ end, duration = 2000 }: { end: number; duration?: number }) {
   const [count, setCount] = useState(0);
@@ -30,10 +31,35 @@ function CountUp({ end, duration = 2000 }: { end: number; duration?: number }) {
 }
 
 const stats = [
-  { label: "Import", value: 1250, suffix: "+", icon: "📦", desc: "Shipment berhasil" },
-  { label: "Export", value: 840, suffix: "+", icon: "🚢", desc: "Shipment berhasil" },
-  { label: "Door to Door", value: 3200, suffix: "+", icon: "🚚", desc: "Pengiriman selesai" },
-  { label: "Klien Puas", value: 500, suffix: "+", icon: "⭐", desc: "Di seluruh Indonesia" },
+  {
+    label: "Import",
+    imageSrc: "/icons/import.png",
+    value: 1250,
+    suffix: "+",
+    desc: "Shipment berhasil",
+  },
+  {
+    label: "Export",
+    imageSrc: "/icons/exportation.png",
+    value: 840,
+    suffix: "+",
+    desc: "Shipment berhasil",
+    
+  },
+  {
+    label: "Door to Door",
+    imageSrc: "/icons/doortodoor.png",
+    value: 3200,
+    suffix: "+",
+    desc: "Pengiriman selesai",
+  },
+  {
+    label: "Klien Puas",
+    imageSrc: "/icons/satisfaction.png",
+    value: 500,
+    suffix: "+",
+    desc: "Di seluruh Indonesia",
+  },
 ];
 
 export default function Stats() {
@@ -51,7 +77,9 @@ export default function Stats() {
               className="text-center p-6 rounded-2xl border-2 hover:border-blue-200 transition-all hover:shadow-lg group"
               style={{borderColor: "#e5e7eb"}}
             >
-              <div className="text-4xl mb-3 group-hover:scale-110 transition-transform">{stat.icon}</div>
+              <div className="text-4xl mb-3 group-hover:scale-110 transition-transform">
+                <Image src={stat.imageSrc} alt={stat.label} width={60} height={60} className="mx-auto" />
+              </div>
               <div className="text-4xl font-black mb-1" style={{color: "var(--primary)"}}>
                 <CountUp end={stat.value} />
                 <span style={{color: "var(--accent)"}}>{stat.suffix}</span>

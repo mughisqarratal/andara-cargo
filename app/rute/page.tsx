@@ -444,6 +444,7 @@ export default function RutePage() {
                         rounded-full
                         text-white
                         shadow-md
+                        animate-pulse
                       "
                       style={{
                         background: "var(--accent)",
