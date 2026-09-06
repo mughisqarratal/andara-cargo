@@ -1,59 +1,267 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image"
+import Image from "next/image";
+import SeaFreightFlow from "../../components/services/SeaFreightFlow";
 
 export const metadata: Metadata = {
-  title: "Sea Freight - Andara Cargo",
-  description: "Pengiriman via laut dengan kapasitas besar dan biaya yang lebih efisien untuk volume tinggi.",
+title: "Sea Freight | PT. Andara Megah Logistik",
+description:
+"Layanan Sea Freight PT. Andara Megah Logistik untuk pengiriman barang melalui jalur laut dengan solusi FCL dan LCL.",
 };
 
-export default function Page() {
-  return (
-    <>
-      <section className="pt-32 pb-20" style={{background: "var(--primary-dark)"}}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <span className="text-sm font-bold tracking-widest uppercase" style={{color: "var(--accent)"}}>Layanan Kami</span>
-          <div className="flex justify-center my-4">
-                    <Image src="/icons/sea.png" alt="Door to Door Import" width={100} height={100} />
-                    </div>
-          <h1 className="text-4xl md:text-5xl font-black text-white mb-5">Sea Freight</h1>
-          <p className="text-blue-200 text-lg max-w-2xl mx-auto">Pengiriman via laut dengan kapasitas besar dan biaya yang lebih efisien untuk volume tinggi.</p>
-        </div>
-      </section>
+export default function SeaFreightPage() {
+const services = [
+"Konsultasi & booking pengiriman",
+"Pickup barang dari supplier",
+"Dokumentasi & persiapan",
+"FCL & LCL",
+"Stuffing & loading",
+"Pengiriman via laut",
+"Customs clearance",
+"Transportasi domestik & delivery",
+];
 
-      <section className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="prose max-w-none">
-            <div className="p-8 rounded-3xl mb-10" style={{background: "var(--bg-light)"}}>
-              <h2 className="text-2xl font-black mb-4" style={{color: "var(--primary)"}}>Tentang Layanan Ini</h2>
-              <p className="text-gray-600 leading-relaxed">Pengiriman via laut dengan kapasitas besar dan biaya yang lebih efisien untuk volume tinggi. PT. Andara Megah Logistik hadir dengan solusi profesional dan tim berpengalaman untuk memastikan setiap pengiriman berjalan lancar.</p>
-            </div>
+const benefits = [
+{
+title: "Kapasitas Besar",
+description:
+"Cocok untuk kebutuhan pengiriman barang dengan volume atau jumlah yang lebih besar.",
+},
+{
+title: "Lebih Efisien",
+description:
+"Solusi pengiriman yang efisien untuk kebutuhan logistik dengan volume besar.",
+},
+{
+title: "FCL & LCL",
+description:
+"Tersedia pilihan pengiriman FCL maupun LCL sesuai kebutuhan dan volume barang.",
+},
+];
 
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 mb-10">
-              {["Cepat & Efisien", "Transparan", "Terpercaya"].map((f) => (
-                <div key={f} className="p-5 rounded-2xl text-center border-2 border-gray-100">
-                  <div className="text-3xl mb-3">⭐</div>
-                  <p className="font-bold" style={{color: "var(--primary)"}}>{f}</p>
-                </div>
-              ))}
-            </div>
+return (
+<>
+{/* HERO */}
+<section
+className="pt-32 pb-20"
+style={{ background: "var(--primary-dark)" }}
+> <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 text-center">
+<span
+className="text-sm font-bold tracking-widest uppercase"
+style={{ color: "var(--accent)" }}
+>
+Layanan Kami </span>
 
-            <div className="rounded-3xl p-8 text-center text-white" style={{background: "var(--primary)"}}>
-              <h3 className="text-2xl font-black mb-3">Butuh Layanan Ini?</h3>
-              <p className="text-blue-200 mb-6">Konsultasi gratis dengan tim ahli kami sekarang</p>
-              <div className="flex flex-wrap gap-4 justify-center">
-                <a href="https://api.whatsapp.com/send?phone=6281356563676" target="_blank" rel="noopener noreferrer"
-                  className="px-6 py-3 rounded-xl font-bold text-sm transition-all hover:opacity-90" style={{background: "var(--accent)"}}>
-                  WhatsApp Sekarang
-                </a>
-                <Link href="/kontak" className="px-6 py-3 rounded-xl font-bold text-sm border-2 border-white/30 hover:bg-white/10 transition-all">
-                  Kontak Lainnya
-                </Link>
-              </div>
-            </div>
+```
+      <div className="flex justify-center my-5">
+        <Image
+          src="/icons/sea.png"
+          alt="Sea Freight"
+          width={100}
+          height={100}
+        />
+      </div>
+
+      <h1 className="text-4xl md:text-5xl font-black text-white mb-5">
+        Sea Freight
+      </h1>
+
+      <p className="text-blue-200 text-lg max-w-2xl mx-auto leading-relaxed">
+        Solusi pengiriman barang melalui jalur laut untuk kebutuhan
+        logistik dengan volume besar, baik FCL maupun LCL.
+      </p>
+    </div>
+  </section>
+
+  {/* TENTANG LAYANAN */}
+  <section className="py-20 bg-white">
+    <div className="max-w-6xl mx-auto px-5 sm:px-8 lg:px-12">
+      <div className="max-w-3xl">
+        <span
+          className="text-sm font-bold tracking-widest uppercase"
+          style={{ color: "var(--accent)" }}
+        >
+          Tentang Layanan
+        </span>
+
+        <h2
+          className="text-3xl md:text-4xl font-black mt-3 mb-6"
+          style={{ color: "var(--primary)" }}
+        >
+          Solusi Pengiriman Laut untuk Berbagai Kebutuhan
+        </h2>
+
+        <p className="text-gray-600 leading-relaxed text-lg">
+          Sea Freight merupakan layanan pengiriman barang melalui jalur
+          laut yang cocok untuk kebutuhan pengiriman dengan volume atau
+          jumlah barang yang lebih besar. PT. Andara Megah Logistik
+          membantu menangani proses pengiriman mulai dari persiapan barang
+          dan dokumen, proses pengiriman melalui laut, customs clearance,
+          hingga pengiriman menuju lokasi tujuan.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  {/* LAYANAN KAMI */}
+  <section className="py-20 bg-[var(--bg-light)]">
+    <div className="max-w-6xl mx-auto px-5 sm:px-8 lg:px-12">
+      <div className="text-center max-w-3xl mx-auto mb-12">
+        <span
+          className="text-sm font-bold tracking-widest uppercase"
+          style={{ color: "var(--accent)" }}
+        >
+          Layanan Kami
+        </span>
+
+        <h2
+          className="text-3xl md:text-4xl font-black mt-3 mb-5"
+          style={{ color: "var(--primary)" }}
+        >
+          Apa Saja yang Kami Tangani?
+        </h2>
+
+        <p className="text-gray-600 leading-relaxed">
+          Kami membantu mengoordinasikan seluruh kebutuhan pengiriman laut,
+          mulai dari persiapan barang hingga barang tiba di alamat tujuan.
+        </p>
+      </div>
+
+      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        {services.map((item) => (
+          <div
+            key={item}
+            className="bg-white rounded-2xl p-5 flex items-start gap-3 shadow-sm"
+          >
+            <span
+              className="font-black text-lg shrink-0"
+              style={{ color: "var(--accent)" }}
+            >
+              ✓
+            </span>
+
+            <span className="font-semibold text-gray-700">{item}</span>
           </div>
-        </div>
-      </section>
-    </>
-  );
+        ))}
+      </div>
+    </div>
+  </section>
+
+  {/* ALUR PROSES */}
+  <section className="py-20 bg-white">
+    <div className="max-w-6xl mx-auto px-5 sm:px-8 lg:px-12">
+      <div className="max-w-3xl mb-10">
+        <span
+          className="text-sm font-bold tracking-widest uppercase"
+          style={{ color: "var(--accent)" }}
+        >
+          Alur Pengiriman
+        </span>
+
+        <h2
+          className="text-3xl md:text-4xl font-black mt-3 mb-5"
+          style={{ color: "var(--primary)" }}
+        >
+          Bagaimana Proses Sea Freight?
+        </h2>
+
+        <p className="text-gray-600 leading-relaxed">
+          Kami membantu mengoordinasikan proses pengiriman laut dari tahap
+          awal hingga barang siap diterima oleh customer.
+        </p>
+      </div>
+
+      <SeaFreightFlow />
+    </div>
+  </section>
+
+  {/* KEUNGGULAN */}
+  <section className="py-20 bg-[var(--bg-light)]">
+    <div className="max-w-6xl mx-auto px-5 sm:px-8 lg:px-12">
+      <div className="text-center max-w-3xl mx-auto mb-12">
+        <span
+          className="text-sm font-bold tracking-widest uppercase"
+          style={{ color: "var(--accent)" }}
+        >
+          Keunggulan
+        </span>
+
+        <h2
+          className="text-3xl md:text-4xl font-black mt-3"
+          style={{ color: "var(--primary)" }}
+        >
+          Mengapa Memilih Sea Freight?
+        </h2>
+      </div>
+
+      <div className="grid md:grid-cols-3 gap-6">
+        {benefits.map((benefit) => (
+          <div
+            key={benefit.title}
+            className="bg-white rounded-2xl p-7 shadow-sm"
+          >
+            <div
+              className="w-12 h-12 rounded-full flex items-center justify-center mb-5 font-black text-xl"
+              style={{
+                background: "rgba(232,160,32,0.12)",
+                color: "var(--accent)",
+              }}
+            >
+              ✓
+            </div>
+
+            <h3
+              className="text-xl font-black mb-3"
+              style={{ color: "var(--primary)" }}
+            >
+              {benefit.title}
+            </h3>
+
+            <p className="text-gray-600 leading-relaxed">
+              {benefit.description}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  {/* CTA */}
+  <section
+    className="py-20"
+    style={{ background: "var(--primary-dark)" }}
+  >
+    <div className="max-w-4xl mx-auto px-5 sm:px-8 text-center">
+      <h2 className="text-3xl md:text-4xl font-black text-white mb-5">
+        Butuh Solusi Pengiriman Laut?
+      </h2>
+
+      <p className="text-blue-200 text-lg leading-relaxed mb-8">
+        Konsultasikan kebutuhan Sea Freight Anda bersama PT. Andara
+        Megah Logistik.
+      </p>
+
+      <div className="flex flex-col sm:flex-row justify-center gap-4">
+        <a
+          href="https://api.whatsapp.com/send?phone=6281356563676"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="px-6 py-3 rounded-xl font-bold text-sm transition-all hover:opacity-90"
+          style={{ background: "var(--accent)" }}
+        >
+          WhatsApp Sekarang
+        </a>
+
+        <Link
+          href="/kontak"
+          className="px-6 py-3 rounded-xl font-bold text-sm text-white border border-white/30 transition-all hover:bg-white/10"
+        >
+          Kontak Lainnya
+        </Link>
+      </div>
+    </div>
+  </section>
+</>
+
+);
 }

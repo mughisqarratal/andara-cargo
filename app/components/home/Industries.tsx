@@ -6,7 +6,7 @@ import "../industries.css";
 const industries = [
   {
     id: "besi",
-    iconSrc: "/icons/besibaja.png",
+    iconSrc: "/icons/industries/steel.png",
     iconEmoji: null,
     title: "Besi Baja",
     short: "Import untuk Industri & Konstruksi",
@@ -16,7 +16,7 @@ const industries = [
   },
   {
     id: "elektronik",
-    iconSrc: "/icons/elektronik.png",
+    iconSrc: "/icons/industries/devices.png",
     iconEmoji: null,
     title: "Elektronik",
     short: "Smartphone, Laptop, TV & Peralatan Elektronik",
@@ -26,7 +26,7 @@ const industries = [
   },
   {
     id: "otomotif",
-    iconSrc: "/icons/otomotif.png",
+    iconSrc: "/icons/industries/brake.png",
     iconEmoji: null,
     title: "Otomotif",
     short: "Mobil, Motor & Suku Cadang",
@@ -36,7 +36,7 @@ const industries = [
   },
   {
     id: "pakaian",
-    iconSrc: "/icons/pakaian.png",
+    iconSrc: "/icons/industries/shirt.png",
     iconEmoji: null,
     title: "Pakaian & Tekstil",
     short: "Pakaian, Sepatu, Tas & Bahan Tekstil",
@@ -46,7 +46,7 @@ const industries = [
   },
   {
     id: "makanan",
-    iconSrc: "/icons/junkfood.png",
+    iconSrc: "/icons/industries/food.png",
     iconEmoji: null,
     title: "Makanan & Minuman",
     short: "Produk Pangan Import",
@@ -56,7 +56,7 @@ const industries = [
   },
   {
     id: "mesin",
-    iconSrc: "/icons/mesin.png",
+    iconSrc: "/icons/industries/lathe.png",
     iconEmoji: null,
     title: "Mesin & Peralatan",
     short: "Mesin Industri & Peralatan Konstruksi",
@@ -66,7 +66,7 @@ const industries = [
   },
   {
     id: "furnitur",
-    iconSrc: "/icons/furnitur.png",
+    iconSrc: "/icons/industries/furniture.png",
     iconEmoji: null,
     title: "Furnitur & Dekorasi",
     short: "Furnitur, Dekorasi Rumah & Perlengkapan",
@@ -76,7 +76,7 @@ const industries = [
   },
   {
     id: "bahan-baku",
-    iconSrc: "/icons/bahanbaku.png",
+    iconSrc: "/icons/industries/raw-material.png",
     iconEmoji: null,
     title: "Bahan Baku",
     short: "Bahan Kimia, Logam & Plastik",
@@ -129,8 +129,8 @@ function FlipCard({ item }: { item: Industry }) {
                 <Image
                   src={item.iconSrc}
                   alt={item.title}
-                  width={40}
-                  height={40}
+                  width={52}
+                  height={52}
                 />
               ) : (
                 <span className="text-3xl">{item.iconEmoji}</span>

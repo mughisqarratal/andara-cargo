@@ -33,6 +33,26 @@ const partners = [
     name: "Meratus",
     imageSrc: "/images/partners/meratus.png",
   },
+  {
+    name: "Hapag-Lloyd",
+    imageSrc: "/images/partners/hapag.png",
+  },
+  {
+    name: "Samudera Indonesia",
+    imageSrc: "/images/partners/samudera.png",
+  },
+  {
+    name: "CMA CGM",
+    imageSrc: "/images/partners/cmacgm.png",
+  },
+  {
+    name: "Ocean Network Express",
+    imageSrc: "/images/partners/one.png",
+  },
+  {
+    name: "Cosco Shipping",
+    imageSrc: "/images/partners/cosco.png",
+  },
 ];
 
 /* =========================================================

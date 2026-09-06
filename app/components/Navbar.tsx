@@ -8,7 +8,7 @@ const layananMenu = [
   { label: "Door to Door Import", href: "/layanan/door-to-door" },
   { label: "Custom Clearance", href: "/layanan/custom-clearance" },
   { label: "Air Freight Service", href: "/layanan/air-freight" },
-  { label: "Sea Freight", href: "/layanan/sea-freight" },
+  { label: "Sea Freight Service", href: "/layanan/sea-freight" },
   { label: "Import Borongan", href: "/layanan/import-borongan" },
 ];
 

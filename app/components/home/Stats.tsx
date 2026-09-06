@@ -34,7 +34,7 @@ const stats = [
   {
     label: "Import",
     imageSrc: "/icons/import.png",
-    value: 1250,
+    value: 10000,
     suffix: "+",
     desc: "Shipment berhasil",
   },
@@ -49,7 +49,7 @@ const stats = [
   {
     label: "Door to Door",
     imageSrc: "/icons/doortodoor.png",
-    value: 3200,
+    value: 6200,
     suffix: "+",
     desc: "Pengiriman selesai",
   },
