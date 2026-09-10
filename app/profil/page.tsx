@@ -16,8 +16,8 @@ const companyStats = [
   },
   {
     imageSrc: "/icons/profile/calendar.png",
-    label: "Berdiri",
-    value: "2010",
+    label: "Tahun Pengalaman",
+    value: "15+",
   },
   {
     imageSrc: "/icons/profile/countries.png",

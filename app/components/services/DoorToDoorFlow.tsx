@@ -67,7 +67,7 @@ export default function DoorToDoorFlow() {
                 transition-all duration-500 ease-in-out
                 ${
                   isVisible
-                    ? "max-h-[500px] opacity-100 translate-y-0"
+                    ? "max-h-125 opacity-100 translate-y-0"
                     : "max-h-0 opacity-0 -translate-y-3"
                 }
               `}
@@ -76,12 +76,12 @@ export default function DoorToDoorFlow() {
               {index < steps.length - 1 && (
                 <div
                   className={`
-                    absolute left-[24px] top-[56px]
-                    w-[3px]
+                    absolute left-6 top-14
+                    w-0.75
                     transition-all duration-500 ease-in-out
                     ${
                       isCompleted
-                        ? "bg-[var(--accent)]"
+                        ? "bg-(--accent)"
                         : "bg-gray-200"
                     }
                   `}
