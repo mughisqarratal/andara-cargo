@@ -9,6 +9,9 @@ export const metadata: Metadata = {
     "Layanan Custom Clearance PT. Andara Megah Logistik untuk membantu proses administrasi dan kepabeanan barang impor.",
 };
 
+const HERO_DESKTOP_IMAGE = "/images/services/customs.png";
+const HERO_MOBILE_IMAGE = "/images/services/customs.png";
+
 export default function CustomClearancePage() {
   const services = [
     "Pemeriksaan dokumen",
@@ -43,34 +46,103 @@ export default function CustomClearancePage() {
     <>
       {/* HERO */}
       <section
-        className="pt-32 pb-20"
-        style={{ background: "var(--primary-dark)" }}
+        className="
+          relative
+          h-95
+          sm:h-105
+          md:h-130
+          flex
+          items-center
+          justify-center
+          overflow-hidden
+        "
       >
-        {" "}
-        <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 text-center">
-          <span
-            className="text-sm font-bold tracking-widest uppercase"
-            style={{ color: "var(--accent)" }}
+        {/* ========================= BACKGROUND DESKTOP ========================== */}
+        <Image
+          src={HERO_DESKTOP_IMAGE}
+          alt="Door to Door Import"
+          fill
+          priority
+          sizes="100vw"
+          className="
+            hidden
+            md:block
+            object-cover
+            object-top-left
+          "
+        />
+
+        {/* ========================= BACKGROUND MOBILE ========================== */}
+        <Image
+          src={HERO_MOBILE_IMAGE}
+          alt="Door to Door Import"
+          fill
+          priority
+          sizes="100vw"
+          className="
+            block
+            md:hidden
+            object-cover
+            object-center
+          "
+        />
+
+        {/* ========================= DARK OVERLAY ========================== */}
+        <div className="absolute inset-0 bg-black/45" />
+
+        {/* ========================= GRADIENT OVERLAY ========================== */}
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(90deg, rgba(0,0,0,0.60) 0%, rgba(0,0,0,0.30) 50%, rgba(0,0,0,0.45) 100%)",
+          }}
+        />
+
+        {/* ========================= HERO CONTENT ========================== */}
+        <div className="relative z-10 w-full">
+          <div
+            className="
+              max-w-4xl
+              mx-auto
+              px-5
+              sm:px-8
+              lg:px-12
+              text-center
+            "
           >
-            Layanan Kami{" "}
-          </span>
-          <div className="flex justify-center my-5">
-            <Image
-              src="/icons/customclearance.png"
-              alt="Custom Clearance"
-              width={100}
-              height={100}
-            />
-          </div>
+            <h1
+              className="
+                text-3xl
+                sm:text-4xl
+                md:text-5xl
+                lg:text-6xl
+                font-black
+                text-white
+                mb-4
+                drop-shadow-lg
+                pt-22
+              "
+            >
+              Custom Clearance
+            </h1>
 
-          <h1 className="text-4xl md:text-5xl font-black text-white mb-5">
-            Custom Clearance
-          </h1>
-
-          <p className="text-blue-200 text-lg max-w-2xl mx-auto leading-relaxed">
-            Solusi pengurusan kepabeanan untuk membantu proses impor berjalan
+            <p
+              className="
+                text-white/90
+                text-sm
+                sm:text-base
+                md:text-lg
+                max-w-2xl
+                mx-auto
+                leading-relaxed
+                drop-shadow-md
+              "
+            >
+               Solusi pengurusan kepabeanan untuk membantu proses impor berjalan
             lebih praktis, terarah, dan sesuai ketentuan yang berlaku.
-          </p>
+            </p>
+          </div>
         </div>
       </section>
 

@@ -40,12 +40,12 @@ export default function Hero() {
               >
                 Konsultasi Gratis
               </Link>
-              <Link
+              {/* <Link
                 href="/layanan"
                 className="px-8 py-4 rounded-xl font-bold text-sm border-2 border-white/30 text-white hover:bg-white/10 transition-all"
               >
                 Lihat Layanan
-              </Link>
+              </Link> */}
             </div>
 
             {/* Feature pills */}

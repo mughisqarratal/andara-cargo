@@ -28,6 +28,9 @@ const benefits = [
   },
 ];
 
+const HERO_DESKTOP_IMAGE = "/images/services/air.png";
+const HERO_MOBILE_IMAGE = "/images/services/air.png";
+
 const suitableFor = [
   "Barang urgent",
   "Barang dengan deadline tertentu",
@@ -46,36 +49,104 @@ export default function Page() {
           HERO
       ========================== */}
       <section
-        className="pt-32 pb-20"
-        style={{ background: "var(--primary-dark)" }}
+        className="
+                relative
+                h-95
+                sm:h-105
+                md:h-130
+                flex
+                items-center
+                justify-center
+                overflow-hidden
+              "
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 text-center">
-          <span
-            className="text-sm font-bold tracking-widest uppercase"
-            style={{ color: "var(--accent)" }}
+        {/* ========================= BACKGROUND DESKTOP ========================== */}
+        <Image
+          src={HERO_DESKTOP_IMAGE}
+          alt="Door to Door Import"
+          fill
+          priority
+          sizes="100vw"
+          className="
+                  hidden
+                  md:block
+                  object-cover
+                  object-top-left
+                "
+        />
+
+        {/* ========================= BACKGROUND MOBILE ========================== */}
+        <Image
+          src={HERO_MOBILE_IMAGE}
+          alt="Door to Door Import"
+          fill
+          priority
+          sizes="100vw"
+          className="
+                  block
+                  md:hidden
+                  object-cover
+                  object-center
+                "
+        />
+
+        {/* ========================= DARK OVERLAY ========================== */}
+        <div className="absolute inset-0 bg-black/45" />
+
+        {/* ========================= GRADIENT OVERLAY ========================== */}
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(90deg, rgba(0,0,0,0.60) 0%, rgba(0,0,0,0.30) 50%, rgba(0,0,0,0.45) 100%)",
+          }}
+        />
+
+        {/* ========================= HERO CONTENT ========================== */}
+        <div className="relative z-10 w-full">
+          <div
+            className="
+                    max-w-4xl
+                    mx-auto
+                    px-5
+                    sm:px-8
+                    lg:px-12
+                    text-center
+                  "
           >
-            Layanan Kami
-          </span>
+            <h1
+              className="
+                      text-3xl
+                      sm:text-4xl
+                      md:text-5xl
+                      lg:text-6xl
+                      font-black
+                      text-white
+                      mb-4
+                      drop-shadow-lg
+                      pt-22
+                    "
+            >
+              Air Freight Service
+            </h1>
 
-          <div className="flex justify-center my-5">
-            <Image
-              src="/icons/air.png"
-              alt="Air Freight Service"
-              width={100}
-              height={100}
-              priority
-            />
+            <p
+              className="
+                      text-white/90
+                      text-sm
+                      sm:text-base
+                      md:text-lg
+                      max-w-2xl
+                      mx-auto
+                      leading-relaxed
+                      drop-shadow-md
+                    "
+            >
+              Solusi pengiriman barang melalui jalur udara untuk kebutuhan yang
+              memerlukan kecepatan, ketepatan waktu, dan penanganan pengiriman
+              yang terkoordinasi.
+            </p>
           </div>
-
-          <h1 className="text-4xl md:text-5xl font-black text-white mb-5">
-            Air Freight Service
-          </h1>
-
-          <p className="text-blue-200 text-lg max-w-3xl mx-auto leading-relaxed">
-            Solusi pengiriman barang melalui jalur udara untuk kebutuhan yang
-            memerlukan kecepatan, ketepatan waktu, dan penanganan pengiriman
-            yang terkoordinasi.
-          </p>
         </div>
       </section>
 
@@ -104,17 +175,21 @@ export default function Page() {
 
             <div className="space-y-4 text-gray-600 leading-relaxed">
               <p>
-                <strong>Air Freight Service</strong> merupakan solusi
-                pengiriman barang melalui jalur udara untuk kebutuhan yang
-                memerlukan waktu pengiriman lebih cepat dibandingkan pengiriman
-                melalui jalur laut.
+                <strong>Air Freight Service</strong> merupakan solusi pengiriman
+                barang melalui jalur udara untuk kebutuhan yang memerlukan waktu
+                pengiriman lebih cepat dibandingkan pengiriman melalui jalur
+                laut.
               </p>
 
               <p>
                 PT. Andara Megah Logistik membantu mengelola proses pengiriman
-                mulai dari <strong>pickup barang di negara asal, pengurusan
-                dokumen, cargo handling, pengiriman melalui udara, customs
-                clearance, hingga pengantaran ke alamat tujuan</strong>.
+                mulai dari{" "}
+                <strong>
+                  pickup barang di negara asal, pengurusan dokumen, cargo
+                  handling, pengiriman melalui udara, customs clearance, hingga
+                  pengantaran ke alamat tujuan
+                </strong>
+                .
               </p>
 
               <p>
@@ -136,10 +211,7 @@ export default function Page() {
       {/* =========================
           FLOW
       ========================== */}
-      <section
-        className="py-20"
-        style={{ background: "var(--bg-light)" }}
-      >
+      <section className="py-20" style={{ background: "var(--bg-light)" }}>
         <div className="max-w-6xl mx-auto px-5 sm:px-8 lg:px-12">
           <div className="text-center mb-12">
             <span
@@ -157,8 +229,8 @@ export default function Page() {
             </h2>
 
             <p className="text-gray-500 max-w-2xl mx-auto mt-4 leading-relaxed">
-              Kami membantu mengelola setiap tahapan pengiriman udara mulai
-              dari konsultasi hingga barang diterima di alamat tujuan.
+              Kami membantu mengelola setiap tahapan pengiriman udara mulai dari
+              konsultasi hingga barang diterima di alamat tujuan.
             </p>
           </div>
 
@@ -208,10 +280,7 @@ export default function Page() {
                   ✓
                 </div>
 
-                <p
-                  className="font-bold"
-                  style={{ color: "var(--primary)" }}
-                >
+                <p className="font-bold" style={{ color: "var(--primary)" }}>
                   {item}
                 </p>
               </div>
@@ -223,10 +292,7 @@ export default function Page() {
       {/* =========================
           BENEFITS
       ========================== */}
-      <section
-        className="py-20"
-        style={{ background: "var(--bg-light)" }}
-      >
+      <section className="py-20" style={{ background: "var(--bg-light)" }}>
         <div className="max-w-6xl mx-auto px-5 sm:px-8 lg:px-12">
           <div className="text-center mb-12">
             <span

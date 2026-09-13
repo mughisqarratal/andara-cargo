@@ -45,83 +45,103 @@ const handledServices = [
 export default function Page() {
   return (
     <>
-      {/* =========================
-          HERO
-      ========================== */}
-      {/* =========================
-    HERO
-========================== */}
-      <section className="relative min-h-[620px] md:min-h-[650px] flex items-center overflow-hidden">
-        {/* =========================
-      BACKGROUND DESKTOP
-  ========================== */}
+      {/* =========================HERO========================== */}
+      <section
+        className="
+    relative
+    h-95
+    sm:h-105
+    md:h-130
+    flex
+    items-center
+    justify-center
+    overflow-hidden
+  "
+      >
+        {/* ========================= BACKGROUND DESKTOP ========================== */}
         <Image
           src={HERO_DESKTOP_IMAGE}
-          alt=""
+          alt="Door to Door Import"
           fill
           priority
           sizes="100vw"
-          className="hidden md:block object-cover object-center"
+          className="
+      hidden
+      md:block
+      object-cover
+      object-center
+    "
         />
 
-        {/* =========================
-      BACKGROUND MOBILE
-  ========================== */}
+        {/* ========================= BACKGROUND MOBILE ========================== */}
         <Image
           src={HERO_MOBILE_IMAGE}
-          alt=""
+          alt="Door to Door Import"
           fill
           priority
           sizes="100vw"
-          className="block md:hidden object-cover object-center"
+          className="
+      block
+      md:hidden
+      object-cover
+      object-center
+    "
         />
 
-        {/* =========================
-      DARK OVERLAY
-      Supaya tulisan tetap terbaca
-  ========================== */}
-        <div className="absolute inset-0 bg-black/50" />
+        {/* ========================= DARK OVERLAY ========================== */}
+        <div className="absolute inset-0 bg-black/45" />
 
-        {/* Gradient tambahan */}
+        {/* ========================= GRADIENT OVERLAY ========================== */}
         <div
           className="absolute inset-0"
           style={{
             background:
-              "linear-gradient(90deg, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.35) 50%, rgba(0,0,0,0.2) 100%)",
+              "linear-gradient(90deg, rgba(0,0,0,0.60) 0%, rgba(0,0,0,0.30) 50%, rgba(0,0,0,0.45) 100%)",
           }}
         />
 
-        {/* =========================
-      CONTENT
-  ========================== */}
+        {/* ========================= HERO CONTENT ========================== */}
         <div className="relative z-10 w-full">
-          <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 text-center">
-            <span
-              className="text-sm md:text-base font-bold tracking-widest uppercase"
-              style={{ color: "var(--accent)" }}
+          <div
+            className="
+        max-w-4xl
+        mx-auto
+        px-5
+        sm:px-8
+        lg:px-12
+        text-center
+      "
+          >
+            <h1
+              className="
+          text-3xl
+          sm:text-4xl
+          md:text-5xl
+          lg:text-6xl
+          font-black
+          text-white
+          mb-4
+          drop-shadow-lg
+          pt-22
+        "
             >
-              Layanan Kami
-            </span>
-
-            <div className="flex justify-center my-5">
-              <Image
-                src="/icons/doortodoor.png"
-                alt="Door to Door Import"
-                width={100}
-                height={100}
-                priority
-                className="object-contain drop-shadow-lg"
-              />
-            </div>
-
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-black text-white mb-5 drop-shadow-lg">
               Door to Door Import
             </h1>
 
-            <p className="text-white/90 text-base md:text-lg max-w-3xl mx-auto leading-relaxed drop-shadow-md">
-              Solusi impor menyeluruh dari pengambilan barang di negara asal,
-              pengiriman internasional, proses kepabeanan, hingga barang tiba
-              langsung di alamat tujuan Anda.
+            <p
+              className="
+          text-white/90
+          text-sm
+          sm:text-base
+          md:text-lg
+          max-w-2xl
+          mx-auto
+          leading-relaxed
+          drop-shadow-md
+        "
+            >
+              Solusi impor menyeluruh dari supplier hingga barang tiba langsung
+              di alamat tujuan Anda.
             </p>
           </div>
         </div>
