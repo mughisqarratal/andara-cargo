@@ -28,6 +28,9 @@ const benefits = [
   },
 ];
 
+const HERO_DESKTOP_IMAGE = "/images/services/doortodoor.png";
+const HERO_MOBILE_IMAGE = "/images/services/doortodoor.png";
+
 const handledServices = [
   "Pickup barang dari supplier",
   "Pengiriman internasional",
@@ -45,37 +48,82 @@ export default function Page() {
       {/* =========================
           HERO
       ========================== */}
-      <section
-        className="pt-32 pb-20"
-        style={{ background: "var(--primary-dark)" }}
-      >
-        <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 text-center">
-          <span
-            className="text-sm font-bold tracking-widest uppercase"
-            style={{ color: "var(--accent)" }}
-          >
-            Layanan Kami
-          </span>
+      {/* =========================
+    HERO
+========================== */}
+      <section className="relative min-h-[620px] md:min-h-[650px] flex items-center overflow-hidden">
+        {/* =========================
+      BACKGROUND DESKTOP
+  ========================== */}
+        <Image
+          src={HERO_DESKTOP_IMAGE}
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="hidden md:block object-cover object-center"
+        />
 
-          <div className="flex justify-center my-5">
-            <Image
-              src="/icons/doortodoor.png"
-              alt="Door to Door Import"
-              width={100}
-              height={100}
-              priority
-            />
+        {/* =========================
+      BACKGROUND MOBILE
+  ========================== */}
+        <Image
+          src={HERO_MOBILE_IMAGE}
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="block md:hidden object-cover object-center"
+        />
+
+        {/* =========================
+      DARK OVERLAY
+      Supaya tulisan tetap terbaca
+  ========================== */}
+        <div className="absolute inset-0 bg-black/50" />
+
+        {/* Gradient tambahan */}
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(90deg, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.35) 50%, rgba(0,0,0,0.2) 100%)",
+          }}
+        />
+
+        {/* =========================
+      CONTENT
+  ========================== */}
+        <div className="relative z-10 w-full">
+          <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 text-center">
+            <span
+              className="text-sm md:text-base font-bold tracking-widest uppercase"
+              style={{ color: "var(--accent)" }}
+            >
+              Layanan Kami
+            </span>
+
+            <div className="flex justify-center my-5">
+              <Image
+                src="/icons/doortodoor.png"
+                alt="Door to Door Import"
+                width={100}
+                height={100}
+                priority
+                className="object-contain drop-shadow-lg"
+              />
+            </div>
+
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-black text-white mb-5 drop-shadow-lg">
+              Door to Door Import
+            </h1>
+
+            <p className="text-white/90 text-base md:text-lg max-w-3xl mx-auto leading-relaxed drop-shadow-md">
+              Solusi impor menyeluruh dari pengambilan barang di negara asal,
+              pengiriman internasional, proses kepabeanan, hingga barang tiba
+              langsung di alamat tujuan Anda.
+            </p>
           </div>
-
-          <h1 className="text-4xl md:text-5xl font-black text-white mb-5">
-            Door to Door Import
-          </h1>
-
-          <p className="text-blue-200 text-lg max-w-3xl mx-auto leading-relaxed">
-            Solusi impor menyeluruh dari pengambilan barang di negara asal,
-            pengiriman internasional, proses kepabeanan, hingga barang tiba
-            langsung di alamat tujuan Anda.
-          </p>
         </div>
       </section>
 
@@ -111,9 +159,12 @@ export default function Page() {
 
               <p>
                 PT. Andara Megah Logistik membantu mengelola proses impor mulai
-                dari <strong>pengambilan barang di negara asal, pengiriman
-                internasional, proses kepabeanan, hingga barang tiba di alamat
-                tujuan</strong>.
+                dari{" "}
+                <strong>
+                  pengambilan barang di negara asal, pengiriman internasional,
+                  proses kepabeanan, hingga barang tiba di alamat tujuan
+                </strong>
+                .
               </p>
 
               <p>
@@ -129,10 +180,7 @@ export default function Page() {
       {/* =========================
           FLOW
       ========================== */}
-      <section
-        className="py-20"
-        style={{ background: "var(--bg-light)" }}
-      >
+      <section className="py-20" style={{ background: "var(--bg-light)" }}>
         <div className="max-w-6xl mx-auto px-5 sm:px-8 lg:px-12">
           <div className="text-center mb-12">
             <span
@@ -201,10 +249,7 @@ export default function Page() {
                   ✓
                 </div>
 
-                <p
-                  className="font-bold"
-                  style={{ color: "var(--primary)" }}
-                >
+                <p className="font-bold" style={{ color: "var(--primary)" }}>
                   {service}
                 </p>
               </div>
@@ -216,10 +261,7 @@ export default function Page() {
       {/* =========================
           BENEFITS
       ========================== */}
-      <section
-        className="py-20"
-        style={{ background: "var(--bg-light)" }}
-      >
+      <section className="py-20" style={{ background: "var(--bg-light)" }}>
         <div className="max-w-6xl mx-auto px-5 sm:px-8 lg:px-12">
           <div className="text-center mb-12">
             <span
@@ -280,8 +322,8 @@ export default function Page() {
             </h3>
 
             <p className="text-blue-200 mb-7 max-w-xl mx-auto">
-              Konsultasikan kebutuhan impor Anda dengan tim PT. Andara
-              Megah Logistik dan dapatkan solusi pengiriman yang sesuai.
+              Konsultasikan kebutuhan impor Anda dengan tim PT. Andara Megah
+              Logistik dan dapatkan solusi pengiriman yang sesuai.
             </p>
 
             <div className="flex flex-wrap gap-4 justify-center">

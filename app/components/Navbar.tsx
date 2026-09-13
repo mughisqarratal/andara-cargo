@@ -268,8 +268,8 @@ export default function Navbar() {
         ===================================================== */}
 
         <div
-          className={`lg:hidden overflow-hidden transition-all duration-300 ease-in-out ${
-            mobileOpen ? "max-h-[600px] opacity-100" : "max-h-0 opacity-0"
+          className={`lg:hidden overflow-hidden transition-all duration-700 ease-in-out ${
+            mobileOpen ? "max-h-150 opacity-100" : "max-h-0 opacity-0"
           }`}
         >
           <div className="bg-white border-t border-gray-100 py-4 space-y-1">
