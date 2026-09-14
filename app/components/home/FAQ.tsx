@@ -175,7 +175,7 @@ export default function FAQ() {
             FAQ
           </span>
 
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-gray-900">
+          <h2 className="text-4xl font-black mt-2 mb-3" style={{ color: "var(--primary)" }}>
             Pertanyaan yang Sering Diajukan
           </h2>
 
