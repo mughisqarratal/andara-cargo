@@ -7,7 +7,7 @@ export default function Footer() {
       className="text-white"
       style={{ background: "var(--primary-dark)" }}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand */}
           <div className="lg:col-span-1 text-center">
@@ -18,7 +18,7 @@ export default function Footer() {
                   alt="Logo"
                   width={90}
                   height={90}
-                  className="object-contain rounded-lg transition-transform duration-300 hover:scale-110"
+                  className="object-contain rounded-lg transition-transform duration-300"
                 />
               </Link>
             </div>
@@ -78,10 +78,10 @@ export default function Footer() {
 
           {/* Menu */}
           <div>
-            <h4 className="font-bold text-white mb-5 text-sm tracking-wider uppercase">
+            <h4 className="font-bold text-white mb-2 text-sm tracking-wider uppercase">
               Menu
             </h4>
-            <ul className="space-y-3">
+            <ul className="space-y-2">
               {[
                 { label: "Home", href: "/" },
                 { label: "Profil", href: "/profil" },
@@ -92,7 +92,7 @@ export default function Footer() {
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className="text-gray-400 hover:text-white text-sm transition-colors flex items-center gap-2"
+                    className="text-gray-400 hover:text-white transform hover:translate-x-1 text-sm transition-colors flex items-center gap-2"
                   >
                     <span
                       className="w-1.5 h-1.5 rounded-full"
@@ -107,10 +107,10 @@ export default function Footer() {
 
           {/* Layanan */}
           <div>
-            <h4 className="font-bold text-white mb-5 text-sm tracking-wider uppercase">
+            <h4 className="font-bold text-white mb-2 text-sm tracking-wider uppercase">
               Layanan
             </h4>
-            <ul className="space-y-3">
+            <ul className="space-y-2">
               {[
                 { label: "Door to Door Import", href: "/layanan/door-to-door" },
                 {
@@ -124,7 +124,7 @@ export default function Footer() {
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className="text-gray-400 hover:text-white text-sm transition-colors flex items-center gap-2"
+                    className="text-gray-400 hover:text-white transform hover:translate-x-1 text-sm transition-colors flex items-center gap-2"
                   >
                     <span
                       className="w-1.5 h-1.5 rounded-full"
@@ -139,11 +139,11 @@ export default function Footer() {
 
           {/* Kontak */}
           <div>
-            <h4 className="font-bold text-white mb-5 text-sm tracking-wider uppercase">
+            <h4 className="font-bold text-white mb-2 text-sm tracking-wider uppercase">
               Kontak
             </h4>
-            <ul className="space-y-4">
-              <li className="flex gap-3 text-sm text-gray-400">
+            <ul className="space-y-2">
+              <li className="flex gap-3 text-sm text-gray-400 ">
                 <svg
                   className="w-5 h-5 shrink-0 mt-0.5"
                   style={{ color: "var(--accent)" }}
@@ -228,8 +228,8 @@ export default function Footer() {
       {/* Bottom bar */}
       <div className="border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex flex-col md:flex-row justify-center items-center">
-          <p className="text-gray-500 text-sm">
-            © 2026 - PT. Andara Megah Logistik. All rights reserved.
+          <p className="text-gray-500 text-sm font-semibold">
+            © 2026 - PT. Andara Megah Logistik.
           </p>
         </div>
       </div>

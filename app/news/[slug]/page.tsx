@@ -66,7 +66,7 @@ export default async function PublicNewsDetailPage({
               {news.images.map((img) => (
                 <div
                   key={img.id}
-                  className="relative h-64 rounded overflow-hidden border border-gray-200 shadow-sm"
+                  className="relative h-80 rounded overflow-hidden border border-gray-200 shadow-sm"
                 >
                   <Image
                     src={img.url}
@@ -88,12 +88,12 @@ export default async function PublicNewsDetailPage({
 
       {/* TOMBOL AKSI OPSIONAL (JIKA ADA) */}
       {news.buttonLabel && news.buttonUrl && (
-        <div className="pt-4">
+        <div className="pt-0">
           <a
             href={news.buttonUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block px-8 py-4 rounded-xl font-bold text-white text-sm shadow-sm transition hover:opacity-90"
+            className="inline-block px-8 py-2 rounded-xl font-bold text-white text-sm shadow-sm transition hover:opacity-90"
             style={{ background: "var(--primary, #1a3c6e)" }}
           >
             {news.buttonLabel} &rarr;

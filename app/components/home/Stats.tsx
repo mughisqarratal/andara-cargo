@@ -64,7 +64,7 @@ const stats = [
 
 export default function Stats() {
   return (
-    <section className="py-16 bg-white">
+    <section className="py-15 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10">
           <span className="text-sm font-bold tracking-widest uppercase" style={{color: "var(--accent)"}}>Project Success</span>
@@ -77,7 +77,7 @@ export default function Stats() {
               className="text-center p-6 rounded-2xl border-2 hover:border-blue-200 transition-all hover:shadow-lg group"
               style={{borderColor: "#e5e7eb"}}
             >
-              <div className="text-4xl mb-3 group-hover:scale-110 transition-transform">
+              <div className="text-2xl mb-3 group-hover:scale-110 transition-transform">
                 <Image src={stat.imageSrc} alt={stat.label} width={60} height={60} className="mx-auto" />
               </div>
               <div className="text-3xl font-black mb-1" style={{color: "var(--primary)"}}>

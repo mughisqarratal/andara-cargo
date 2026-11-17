@@ -59,7 +59,7 @@ export default async function PublicNewsPage() {
       {/* =====================================================
           CONTENT SECTION
       ===================================================== */}
-      <section className="py-20 bg-white">
+      <section className="py-10 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {newsList.length === 0 ? (
             <div className="text-center py-16 bg-white rounded-3xl border border-gray-100 shadow-sm text-gray-400">

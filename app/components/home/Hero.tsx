@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { motion, useScroll, useTransform, useSpring } from 'framer-motion'
 
 const heroImages = [
   {
@@ -163,7 +164,7 @@ export default function Hero() {
           <div className="w-full">
             <div className="relative w-full max-w-xl mx-auto">
               {/* Image */}
-              <div className="relative aspect-[4/3] overflow-hidden rounded-3xl shadow-2xl border border-white/10">
+              <div className="relative aspect-4/3 overflow-hidden rounded-3xl shadow-2xl border border-white/10">
                 {heroImages.map((image, index) => (
                   <Image
                     key={image.src}
@@ -181,7 +182,7 @@ export default function Hero() {
                 ))}
 
                 {/* Dark overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-linear-to-t from-black/50 via-transparent to-transparent" />
 
                 {/* Floating label */}
                 <div className="absolute left-5 bottom-5 right-5">

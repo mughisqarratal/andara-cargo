@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import LogoutButton from "../../components/admin/LogoutButton"; 
+import LogoutButton from "../../components/admin/LogoutButton";
 
 // Mencegah browser menyimpan cache halaman admin setelah logout
 export const dynamic = "force-dynamic";
@@ -17,13 +17,12 @@ export default function AdminLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div 
+    <div
       className="fixed inset-0 z-50 flex bg-gray-50 overflow-hidden"
       style={{ fontFamily: "'Roboto', sans-serif" }}
     >
-      
       {/* SIDEBAR */}
-      <aside 
+      <aside
         className="w-64 flex flex-col shrink-0 shadow-md text-slate-100"
         style={{ background: "var(--primary-dark, #0f172a)" }}
       >
@@ -55,17 +54,11 @@ export default function AdminLayout({
           </Link>
           <Link
             href="/dashboard/admin/report"
-            className="block px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-400 hover:bg-slate-800/80 hover:text-white transition"
+            className="block px-4 py-2.5 rounded-xl text-sm font-semibold text-white hover:bg-slate-800/80 hover:text-white transition"
           >
-            Report{" "}
-            <span 
-              className="text-xs text-white px-2 py-0.5 rounded-md ml-1 font-bold"
-              style={{ background: "var(--accent, #f59e0b)" }}
-            >
-              Soon
-            </span>
+            Report
           </Link>
-           <LogoutButton />
+          <LogoutButton />
         </nav>
 
         {/* BAGIAN BAWAH SIDEBAR: TOMBOL LOGOUT & KEMBALI */}
@@ -86,7 +79,6 @@ export default function AdminLayout({
       <main className="flex-1 overflow-y-auto bg-gray-50 p-8">
         <div className="max-w-6xl mx-auto">{children}</div>
       </main>
-
     </div>
   );
 }

@@ -2,7 +2,7 @@ import bcrypt from "bcryptjs";
 
 async function run() {
   // Ganti "admin123" dengan password yang kamu inginkan
-  const passwordPlain = "admin123";
+  const passwordPlain = "Admin12345";
   
   // Membuat hash
   const hashedPassword = await bcrypt.hash(passwordPlain, 10);

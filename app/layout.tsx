@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import ClientLayoutWrapper from "./components/ClientLayoutWrapper";
+import SiteTracker from "./components/SiteTracker";
+import { Suspense } from "react";
 
 export const metadata: Metadata = {
   title: "Andara Cargo - Layanan Import Export Barang Termurah",
@@ -33,6 +35,11 @@ export default function RootLayout({
         />
       </head>
       <body style={{ fontFamily: "'Roboto', sans-serif" }}>
+        {/* Suspense wajib untuk SiteTracker karena membaca useSearchParams */}
+        <Suspense fallback={null}>
+          <SiteTracker />
+        </Suspense>
+
         <ClientLayoutWrapper>{children}</ClientLayoutWrapper>
       </body>
     </html>

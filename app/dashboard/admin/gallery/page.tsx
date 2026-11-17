@@ -26,7 +26,7 @@ export default async function AdminGalleryPage() {
         </div>
         <Link
           href="/dashboard/admin/gallery/create"
-          className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition"
+          className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition cursor-auto"
         >
           + Upload Foto Baru
         </Link>

@@ -59,3 +59,83 @@ model Gallery {
 
   @@map("galleries")
 }
+
+// --- TABEL ANALITIK TRAFIK WEB ---
+
+model SiteTrafficHourly {
+  hour        DateTime @id @db.DateTime(3)
+  pageviews   Int      @default(0)
+  sessions    Int      @default(0)
+  visitors    Int      @default(0)
+  newVisitors Int      @default(0)
+  bounces     Int      @default(0)
+
+  @@map("site_traffic_hourly")
+}
+
+model SitePageHourly {
+  hour      DateTime
+  path      String   @db.VarChar(255)
+  pageviews Int      @default(0)
+  entries   Int      @default(0)
+
+  @@id([hour, path])
+  @@index([path, hour])
+  @@map("site_page_hourly")
+}
+
+model SiteSourceDaily {
+  day      DateTime @db.Date
+  source   String   @db.VarChar(100)
+  medium   String   @db.VarChar(100)
+  campaign String   @default("") @db.VarChar(100)
+  sessions Int      @default(0)
+
+  @@id([day, source, medium, campaign])
+  @@map("site_source_daily")
+}
+
+model SiteDeviceDaily {
+  day      DateTime @db.Date
+  device   String   @db.VarChar(50) // mobile, tablet, desktop
+  sessions Int      @default(0)
+
+  @@id([day, device])
+  @@map("site_device_daily")
+}
+
+model SiteVisitorDays {
+  day         DateTime  @db.Date
+  visitorHash String    @db.VarChar(64)
+  firstSeenAt DateTime  @default(now()) @db.DateTime(3)
+
+  @@id([day, visitorHash])
+  @@index([visitorHash])
+  @@map("site_visitor_days")
+}
+
+model SiteVisitors {
+  visitorHash String   @id @db.VarChar(64)
+  firstDay    DateTime @db.Date
+
+  @@map("site_visitors")
+}
+
+model SiteSessions {
+  sessionId String   @id @db.VarChar(64)
+  startedAt DateTime @default(now()) @db.DateTime(3)
+  lastAt    DateTime @default(now()) @db.DateTime(3)
+  pageviews Int      @default(1)
+
+  @@index([lastAt])
+  @@map("site_sessions")
+}
+
+model SiteBrowserDaily {
+  day      DateTime
+  browser  String
+  sessions Int      @default(0)
+
+  @@id([day, browser])
+  @@map("site_browser_daily")
+}
