@@ -49,13 +49,11 @@ model NewsImage {
 }
 
 model Gallery {
-  id          Int      @id @default(autoincrement())
-  title       String   @db.VarChar(150)
-  description String?  @db.VarChar(250)
-  imageUrl    String   @db.VarChar(500)
-  publicId    String   @db.VarChar(255)
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
+  id        Int      @id @default(autoincrement())
+  imageUrl  String   @db.VarChar(500)
+  publicId  String   @db.VarChar(255)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 
   @@map("galleries")
 }
